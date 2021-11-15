@@ -46,9 +46,8 @@ void Ground::paintGL() {
       abcg::glUniformMatrix4fv(m_modelMatrixLoc, 1, GL_FALSE, &model[0][0]);
 
       // Set color (checkerboard pattern)
-      const float gray{(z + x) % 2 == 0 ? 1.0f : 0.8f};
-      //const float gray = 1.7f;
-      abcg::glUniform4f(m_colorLoc, gray, gray, gray, 1.0f);
+      const float blue{(z + x) % 2 == 0 ? 0.12f : 0.21f};
+      abcg::glUniform4f(m_colorLoc, 0.00f, blue, 0.38f, 1.0f);
 
       abcg::glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     }
