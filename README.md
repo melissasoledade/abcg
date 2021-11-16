@@ -30,4 +30,13 @@ O projeto consiste em uma representação em 3d de uma parte de um labirinto ins
 
 ### Imagens
 Imagem inicial da cena e visão do corredor:
+
 ![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-01.png)
+
+Imagem da visão do Pacman:
+
+![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-02.png)
+
+Imagem de outro ângulo do Pacman:
+
+![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-04.png)
