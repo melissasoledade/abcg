@@ -37,6 +37,10 @@ Imagem da visão do Pacman:
 
 ![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-02.png)
 
+Pacman:
+
+![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-03.png)
+
 Imagem de outro ângulo do Pacman:
 
 ![Alt text](https://github.com/melissasoledade/abcg/blob/main/pacman-04.png)
