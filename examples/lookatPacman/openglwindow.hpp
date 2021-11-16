@@ -9,6 +9,7 @@
 #include "wall.hpp"
 #include "wall2.hpp"
 #include "wall3.hpp"
+#include "wall4.hpp"
 
 struct Vertex {
   glm::vec3 position;
@@ -45,6 +46,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
   Wall m_wall;
   Wall2 m_wall2;
   Wall3 m_wall3;
+  Wall4 m_wall4;
 
   std::vector<Vertex> m_vertices;
   std::vector<GLuint> m_indices;

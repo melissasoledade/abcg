@@ -63,6 +63,7 @@ void OpenGLWindow::initializeGL() {
   m_wall.initializeGL(m_program);
   m_wall2.initializeGL(m_program);
   m_wall3.initializeGL(m_program);
+  m_wall4.initializeGL(m_program);
 
   // Load model
   //loadModelFromFile(getAssetsPath() + "bunny.obj");
@@ -198,6 +199,7 @@ void OpenGLWindow::paintGL() {
   m_wall.paintGL();
   m_wall2.paintGL();
   m_wall3.paintGL();
+  m_wall4.paintGL();
 
   abcg::glUseProgram(0);
 }
@@ -216,6 +218,7 @@ void OpenGLWindow::terminateGL() {
   m_wall.terminateGL();
   m_wall2.terminateGL();
   m_wall3.terminateGL();
+  m_wall4.terminateGL();
 
   abcg::glDeleteProgram(m_program);
   abcg::glDeleteBuffers(1, &m_EBO);
