@@ -25,5 +25,5 @@ O projeto consiste em uma representação em 3d de uma parte de um labirinto ins
 ### Código 
 * camera.cpp: câmera utilizada no projeto lookat. Modificamos a posição inicial da câmera para ficar no início do corredor do labirinto.
 * ground.cpp: representa o chão da cena, feito também em quadriculado e nos tons de azul, inspirados no jogo do Pacman.
-* wall.cpp (4 arquivos wall): cada um dos arquivos representa uma parede, feita em plano 3d. As paredes também estão em tom azul, inspirado no jogo do Pacman.
+* wall.cpp (4 arquivos wall): cada um dos arquivos representa uma parede (plano 3d). As paredes também estão em tons azuis, inspiração no jogo do Pacman.
 * openglwindow.cpp: carrega o modelo do .obj file do Pacman e renderiza os outros objetos da cena (ground, walls).
