@@ -6,6 +6,7 @@
 #include "abcg.hpp"
 #include "camera.hpp"
 #include "ground.hpp"
+#include "wall.hpp"
 
 struct Vertex {
   glm::vec3 position;
@@ -39,6 +40,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
   float m_panSpeed{0.0f};
 
   Ground m_ground;
+  Wall m_wall;
 
   std::vector<Vertex> m_vertices;
   std::vector<GLuint> m_indices;
