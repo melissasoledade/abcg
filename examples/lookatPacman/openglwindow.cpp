@@ -184,8 +184,8 @@ void OpenGLWindow::paintGL() {
   // Draw yellow pacman pos (0, 1.5, -1.0)
   glm::mat4 model{1.0f};
   model = glm::mat4(1.0);
-  model = glm::translate(model, glm::vec3(0.0f, 1.5f, -1.0f));
-  model = glm::scale(model, glm::vec3(0.5f));
+  model = glm::translate(model, glm::vec3(0.0f, 0.3f, 0.0f));
+  model = glm::scale(model, glm::vec3(0.1f));
 
   abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &model[0][0]);
   abcg::glUniform4f(colorLoc, 1.0f, 0.8f, 0.0f, 1.0f);
