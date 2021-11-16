@@ -5,10 +5,10 @@
 void Wall::initializeGL(GLuint program) {
   // Unit quad on the xy plane
   // clang-format off
-  std::array vertices{glm::vec3(-1.0f, 1.0f,  0.0f), 
-                      glm::vec3(-1.0f, -1.0f, 0.0f),
-                      glm::vec3( 1.0f, 1.0f,  0.0f),
-                      glm::vec3( 1.0f, -1.0f, 0.0f)};
+  std::array vertices{glm::vec3(-3.0f, 1.0f,  0.0f), 
+                      glm::vec3(-3.0f, -1.0f, 0.0f),
+                      glm::vec3( 3.0f, 1.0f,  0.0f),
+                      glm::vec3( 3.0f, -1.0f, 0.0f)};
   // clang-format on                      
 
   // Generate VBO
@@ -42,6 +42,8 @@ void Wall::paintGL() {
     //for (const auto x : iter::range(-N, N + 2)) {
       // Set model matrix
       glm::mat4 model{1.0f};
+      model = glm::mat4(1.0);
+      model = glm::translate(model, glm::vec3(0.0f, 0.0f, -1.0f));
       //model = glm::translate(model, glm::vec3(x, 0.0f, y));
       abcg::glUniformMatrix4fv(m_modelMatrixLoc, 1, GL_FALSE, &model[0][0]);
 
