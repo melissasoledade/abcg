@@ -66,7 +66,6 @@ void OpenGLWindow::initializeGL() {
   m_wall4.initializeGL(m_program);
 
   // Load model
-  //loadModelFromFile(getAssetsPath() + "bunny.obj");
   loadModelFromFile(getAssetsPath() + "pacman.obj");
 
   // Generate VBO
@@ -184,10 +183,10 @@ void OpenGLWindow::paintGL() {
 
   abcg::glBindVertexArray(m_VAO);
 
-  // Draw yellow pacman pos (0, 1.5, -1.0)
+  // Draw yellow pacman 
   glm::mat4 model{1.0f};
   model = glm::mat4(1.0);
-  model = glm::translate(model, glm::vec3(0.0f, 0.3f, 0.0f));
+  model = glm::translate(model, glm::vec3(0.0f, 0.5f, 0.0f));
   model = glm::scale(model, glm::vec3(0.1f));
 
   abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &model[0][0]);
