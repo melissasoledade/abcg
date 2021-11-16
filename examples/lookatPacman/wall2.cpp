@@ -1,14 +1,14 @@
-#include "wall.hpp"
+#include "wall2.hpp"
 
 #include <cppitertools/itertools.hpp>
 
-void Wall::initializeGL(GLuint program) {
+void Wall2::initializeGL(GLuint program) {
   // Unit quad on the xy plane
   // clang-format off
-  std::array vertices{glm::vec3(-6.0f, 1.0f,  0.0f), 
-                      glm::vec3(-6.0f, -1.0f, 0.0f),
-                      glm::vec3( 6.0f, 1.0f,  0.0f),
-                      glm::vec3( 6.0f, -1.0f, 0.0f)};
+  std::array vertices{glm::vec3(-4.0f, 1.0f,  0.0f), 
+                      glm::vec3(-4.0f, -1.0f, 0.0f),
+                      glm::vec3( 4.0f, 1.0f,  0.0f),
+                      glm::vec3( 4.0f, -1.0f, 0.0f)};
   // clang-format on                      
 
   // Generate VBO
@@ -33,7 +33,7 @@ void Wall::initializeGL(GLuint program) {
   m_colorLoc = abcg::glGetUniformLocation(program, "color");
 }
 
-void Wall::paintGL() {
+void Wall2::paintGL() {
   // Draw a grid of tiles centered on the xy plane
   //const int N{5};
 
@@ -43,9 +43,9 @@ void Wall::paintGL() {
       // Set model matrix
       glm::mat4 model{1.0f};
       model = glm::mat4(1.0);
-      model = glm::translate(model, glm::vec3(0.0f, 0.0f, -1.0f));
-      //model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0, 1, 0));
-      //model = glm::translate(model, glm::vec3(x, 0.0f, y));
+      model = glm::translate(model, glm::vec3(-1.0f, 0.0f, 0.0f));
+      model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0, 1, 0));
+      
       abcg::glUniformMatrix4fv(m_modelMatrixLoc, 1, GL_FALSE, &model[0][0]);
 
       // Set color (checkerboard pattern)
@@ -58,7 +58,7 @@ void Wall::paintGL() {
   abcg::glBindVertexArray(0);
 }
 
-void Wall::terminateGL() {
+void Wall2::terminateGL() {
   abcg::glDeleteBuffers(1, &m_VBO);
   abcg::glDeleteVertexArrays(1, &m_VAO);
 }

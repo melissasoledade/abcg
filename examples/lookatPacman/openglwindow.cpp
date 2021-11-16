@@ -61,6 +61,7 @@ void OpenGLWindow::initializeGL() {
   m_program = createProgramFromFile(getAssetsPath() + "lookatPacman.vert", getAssetsPath() + "lookatPacman.frag");
   m_ground.initializeGL(m_program);
   m_wall.initializeGL(m_program);
+  m_wall2.initializeGL(m_program);
 
   // Load model
   //loadModelFromFile(getAssetsPath() + "bunny.obj");
@@ -194,6 +195,7 @@ void OpenGLWindow::paintGL() {
   // Draw ground
   m_ground.paintGL();
   m_wall.paintGL();
+  m_wall2.paintGL();
 
   abcg::glUseProgram(0);
 }
@@ -210,6 +212,7 @@ void OpenGLWindow::resizeGL(int width, int height) {
 void OpenGLWindow::terminateGL() {
   m_ground.terminateGL();
   m_wall.terminateGL();
+  m_wall2.terminateGL();
 
   abcg::glDeleteProgram(m_program);
   abcg::glDeleteBuffers(1, &m_EBO);

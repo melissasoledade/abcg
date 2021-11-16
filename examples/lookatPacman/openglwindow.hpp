@@ -7,6 +7,7 @@
 #include "camera.hpp"
 #include "ground.hpp"
 #include "wall.hpp"
+#include "wall2.hpp"
 
 struct Vertex {
   glm::vec3 position;
@@ -41,6 +42,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
 
   Ground m_ground;
   Wall m_wall;
+  Wall2 m_wall2;
 
   std::vector<Vertex> m_vertices;
   std::vector<GLuint> m_indices;
