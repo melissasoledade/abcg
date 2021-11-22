@@ -28,6 +28,8 @@ O projeto consiste em uma representação em 3d de uma parte de um labirinto ins
 * wall.cpp (4 arquivos wall): cada um dos arquivos representa uma parede (plano 3d). As paredes também estão em tons azuis, inspiração no jogo do Pacman.
 * openglwindow.cpp: carrega o modelo do .obj file do Pacman e renderiza os outros objetos da cena (ground, walls).
 
+### [WebAssembly](https://melissasoledade.github.io/abcg/lookatpacman/)
+
 ### Imagens
 Imagem inicial da cena e visão do corredor:
 
